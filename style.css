@@ -25,55 +25,53 @@
     *zoom: 1;
 }
 
-/* MY CSS */
+/********** MY CSS **********/
 
 body {
 	background-color: black;
+	text-align: center;				/* centers the nav bar of li elements */
 }
 
 /* Solar System Heading */
 header h1 {
 	font-family: bangers;
 	color: white;	
-	text-align: center;
 	font-size: 6.4em;
 	margin: 10px 0;
 }
 
 /* Nav Bar of planet names */
 li  {
-	float: left;
+	display: inline-block;			/* inline-block needed for centering */ 
 	list-style: none;
 	outline: 1px solid yellow;
-	text-align: center;
-}
-
-li:first-of-type {				    /* first li is hidden to push the floated elements to the first */
-	width: 350px;
-	background-color: orange;
-	visibility: hidden;
 }
 
 li a {
 	display: block;
 	padding: 10px;
-	outline: 1px solid orange;
 	text-decoration: none;
 	color: white;
 	font-family: bangers;
 	font-size: 2em;
 }
 
+/* common rules to make each planet's orbit horizontally centered on screen */
+.orbit {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	border: 1px solid white;
+	border-radius: 50%;
+}
+
 /*  orbit for mercury */
 .mercury {
 	width: 100px;
 	height: 100px;
-	border: 1px solid black;
-	border-radius: 50px;
-	margin: 0 auto;
-	position: absolute;
-	top: 700px;	
-	left: 700px;
+	top: 700px;
 }
 
 /* circle to represent the planet*/ 
@@ -93,22 +91,20 @@ li a {
 	width: 60px;
 	height: 60px;
 	background-color: #DBCD07;
-	border-radius: 30px;
+	border-radius: 50%;
 	position: absolute;
-	top: 720px;	
-	left: 720px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top: 720px;
 	box-shadow: 0px 0px 30px #FFD630;
 }
 
 .venus {
 	width: 200px;
 	height: 200px;
-	border: 1px solid black;
-	border-radius: 100px;
-	margin: 0 auto;
-	position: absolute;
-	top: 650px;	
-	left: 650px;
+	top: 650px;
 }
 
 .planet-venus {
@@ -126,12 +122,7 @@ li a {
 .earth {
 	width: 300px;
 	height: 300px;
-	border: 1px solid black;
-	border-radius: 200px;
-	margin: 0 auto;
-	position: absolute;
 	top: 600px;	
-	left: 600px;
 }
 
 .planet-earth {
@@ -150,7 +141,7 @@ li a {
 	width: 8px;
 	height: 8px;
 	background-color: #B3B3B3;
-	border-radius: 10px;
+	border-radius: 50%;
 	position: absolute;
 	left: 11px;
 	top: 11px;
@@ -161,12 +152,7 @@ li a {
 .mars {
 	width: 400px;
 	height: 400px;
-	border: 1px solid black;
-	border-radius: 200px;
-	margin: 0 auto;
-	position: absolute;
 	top: 550px;	
-	left: 550px;
 }
 
 .planet-mars {
@@ -184,12 +170,7 @@ li a {
 .jupiter {
 	width: 500px;
 	height: 500px;
-	border: 1px solid black;
-	border-radius: 300px;
-	margin: 0 auto;
-	position: absolute;
 	top: 500px;	
-	left: 500px;
 }
 
 .planet-jupiter {
@@ -207,12 +188,7 @@ li a {
 .saturn {
 	width: 600px;
 	height: 600px;
-	border: 1px solid black;
-	border-radius: 300px;
-	margin: 0 auto;
-	position: absolute;
 	top: 450px;	
-	left: 450px;
 }
 
 .planet-saturn {
@@ -241,12 +217,7 @@ li a {
 .uranus {
 	width: 700px;
 	height: 700px;
-	border: 1px solid black;
-	border-radius: 400px;
-	margin: 0 auto;
-	position: absolute;
 	top: 400px;	
-	left: 400px;
 }
 
 .planet-uranus {
@@ -264,12 +235,7 @@ li a {
 .neptune {
 	width: 800px;
 	height: 800px;
-	border: 1px solid black;
-	border-radius: 400px;
-	margin: 0 auto;
-	position: absolute;
 	top: 350px;	
-	left: 350px;
 }
 
 .planet-neptune {
@@ -287,12 +253,8 @@ li a {
 .pluto {
 	width: 900px;
 	height: 900px;
-	border: 1px solid black;
-	border-radius: 500px;
 	margin-bottom: 100px; 
-	position: absolute;
-	top: 300px;	
-	left: 300px;
+	top: 300px;
 }
 
 .planet-pluto {
@@ -308,39 +270,39 @@ li a {
 }
 
 /* Event handlers for when user hovers over each li element, corresponding orbit will turn red */ 
-li:nth-child(3):hover ~ .mercury {
+li:nth-child(2):hover ~ .mercury {
 	border: 2px solid red;
 }
 
-li:nth-child(4):hover ~ .venus {
+li:nth-child(3):hover ~ .venus {
 	border: 2px solid red;
 }
 
-li:nth-child(5):hover ~ .earth {
+li:nth-child(4):hover ~ .earth {
 	border: 2px solid red;
 }
 
-li:nth-child(6):hover ~ .mars {
+li:nth-child(5):hover ~ .mars {
 	border: 2px solid red;
 }
 
-li:nth-child(7):hover ~ .jupiter {
+li:nth-child(6):hover ~ .jupiter {
 	border: 2px solid red;
 }
 
-li:nth-child(8):hover ~ .saturn {
+li:nth-child(7):hover ~ .saturn {
 	border: 2px solid red;
 }
 
-li:nth-child(9):hover ~ .uranus {
+li:nth-child(8):hover ~ .uranus {
 	border: 2px solid red;
 }
 
-li:nth-child(10):hover ~ .neptune {
+li:nth-child(9):hover ~ .neptune {
 	border: 2px solid red;
 }
 
-li:nth-child(11):hover ~ .pluto {
+li:nth-child(10):hover ~ .pluto {
 	border: 2px solid red;
 }
 
