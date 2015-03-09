@@ -19,4 +19,4 @@ Looked up centering absolute positioned divs here:
 Needed Improvements:
 -- could use the asteroid belt
 
-Github Host Link:  http://pliu82.github.io/solar_system/
+Github Page: http://pliu82.github.io/solar-system
