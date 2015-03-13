@@ -1,6 +1,6 @@
-****************
+*****************************
 Solar System CSS3 Animation
-****************
+*****************************
 The idea for this project comes from: 
 	http://neography.com/experiment/circles/solarsystem/
 
@@ -11,7 +11,8 @@ Hosted Link:
 	http://pliu82.github.io/solar-system
 
 Instructions:
-	Users can hover over the navigation menu & the respective planet's orbit will highlight in red.
+	Users can hover over the navigation menu & 
+	the respective planet's orbit will highlight in red.
 
 Languages: 
 	HTML / CSS3
