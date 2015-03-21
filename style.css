@@ -253,8 +253,13 @@ li a {
 .pluto {
 	width: 900px;
 	height: 900px;
-	margin-bottom: 100px; 
 	top: 300px;
+}
+
+.spacer {
+	width: 900px;
+	height: 900px;
+	margin-bottom: 100px;
 }
 
 .planet-pluto {
